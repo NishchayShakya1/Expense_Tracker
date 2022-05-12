@@ -2,7 +2,8 @@
 
 An App that can Track your Daily Expenses and Income.
 
-# Features 
+## Features 
 
 - CRUD Operations(Expenses & Income)
 - Use of HiveDB
+- Use of Neumorphism Design(UI)
