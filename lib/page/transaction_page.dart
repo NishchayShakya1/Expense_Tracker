@@ -67,14 +67,67 @@ class _TransactionPageState extends State<TransactionPage> {
       return Column(
         children: [
           const SizedBox(height: 24),
-          Text(
-            'Net Expense: $newExpenseString',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: color,
+          Container(
+            width: 500.0,
+            height: 100.0,
+            // color: const Color(0xffefeeee),
+            alignment: Alignment.center,
+            transformAlignment: Alignment.center,
+            child: Container(
+              width: 350,
+              height: 147,
+              // child: const Icon(
+              //   Icons.star,
+              //   size: 49,
+              //   color: Colors.amber,
+              // ),
+              child: Center(
+                child: Text(
+                  'Net Expense: $newExpenseString',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: color,
+                  ),
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: const Color(0xffefeeee),
+                borderRadius: BorderRadius.circular(25),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xffcecdcd),
+                    Color(0xffffffff),
+                  ],
+                ),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0xffffffff),
+                    offset: Offset(-11.8, -11.8),
+                    blurRadius: 16,
+                    spreadRadius: 0.0,
+                  ),
+                  BoxShadow(
+                    color: Color(0xffcecdcd),
+                    offset: Offset(11.8, 11.8),
+                    blurRadius: 16,
+                    spreadRadius: 0.0,
+                  ),
+                ],
+              ),
             ),
           ),
+
+          // Text(
+          //   'Net Expense: $newExpenseString',
+          //   style: TextStyle(
+          //     fontWeight: FontWeight.bold,
+          //     fontSize: 20,
+          //     color: color,
+          //   ),
+          // ),
           const SizedBox(height: 24),
           Expanded(
             child: ListView.builder(
